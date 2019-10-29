@@ -1,0 +1,356 @@
+2019-10-29 11:04:37.297 +05:30 [INF] Registering a service [id: deliveries-service:985559b403a34af4a0dfd7474f52d46d] in Consul...
+2019-10-29 11:04:37.392 +05:30 [INF] Start processing HTTP request PUT "http://localhost:8500/v1/agent/service/register"
+2019-10-29 11:04:37.399 +05:30 [INF] Sending HTTP request PUT "http://localhost:8500/v1/agent/service/register"
+2019-10-29 11:04:37.505 +05:30 [INF] Received HTTP response after 101.6881ms - "OK"
+2019-10-29 11:04:37.509 +05:30 [INF] End processing HTTP request after 124.223ms - "OK"
+2019-10-29 11:04:37.515 +05:30 [INF] Registered a service [id: deliveries-service:985559b403a34af4a0dfd7474f52d46d] in Consul.
+2019-10-29 11:04:37.964 +05:30 [INF] Declaring an exchange: 'deliveries', type: 'topic'.
+2019-10-29 11:04:37.986 +05:30 [INF] Declaring a queue: 'e_shop.services.deliveries/order_created' with routing key: 'order_created' for exchange: 'orders'.
+2019-10-29 11:04:38.134 +05:30 [INF] Now listening on: http://localhost:5000
+2019-10-29 11:04:38.136 +05:30 [INF] Now listening on: https://localhost:5001
+2019-10-29 11:04:38.137 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2019-10-29 11:04:38.139 +05:30 [INF] Hosting environment: Production
+2019-10-29 11:04:38.140 +05:30 [INF] Content root path: E:\2019\netcore-eShop\EShop\EShop.Services.Delivery
+2019-10-29 11:04:44.217 +05:30 [INF] Application is shutting down...
+2019-10-29 11:04:44.226 +05:30 [INF] Deregistering a service [id: deliveries-service:985559b403a34af4a0dfd7474f52d46d] from Consul...
+2019-10-29 11:04:44.229 +05:30 [INF] Start processing HTTP request PUT "http://localhost:8500/v1/agent/service/deregister/deliveries-service:985559b403a34af4a0dfd7474f52d46d"
+2019-10-29 11:04:44.232 +05:30 [INF] Sending HTTP request PUT "http://localhost:8500/v1/agent/service/deregister/deliveries-service:985559b403a34af4a0dfd7474f52d46d"
+2019-10-29 11:04:44.240 +05:30 [INF] Received HTTP response after 8.1727ms - "OK"
+2019-10-29 11:04:44.243 +05:30 [INF] End processing HTTP request after 13.127400000000002ms - "OK"
+2019-10-29 11:04:44.245 +05:30 [INF] Deregistered a service [id: deliveries-service:985559b403a34af4a0dfd7474f52d46d] from Consul.
+2019-10-29 11:07:17.345 +05:30 [INF] Registering a service [id: deliveries-service:52622436ce7c4d8dbf2d7dd95e65ca08] in Consul...
+2019-10-29 11:07:17.422 +05:30 [INF] Start processing HTTP request PUT "http://localhost:8500/v1/agent/service/register"
+2019-10-29 11:07:17.428 +05:30 [INF] Sending HTTP request PUT "http://localhost:8500/v1/agent/service/register"
+2019-10-29 11:07:17.535 +05:30 [INF] Received HTTP response after 102.3147ms - "OK"
+2019-10-29 11:07:17.538 +05:30 [INF] End processing HTTP request after 123.6838ms - "OK"
+2019-10-29 11:07:17.541 +05:30 [INF] Registered a service [id: deliveries-service:52622436ce7c4d8dbf2d7dd95e65ca08] in Consul.
+2019-10-29 11:07:17.733 +05:30 [INF] Declaring an exchange: 'deliveries', type: 'topic'.
+2019-10-29 11:07:17.748 +05:30 [INF] Declaring a queue: 'e_shop.services.deliveries/order_created' with routing key: 'order_created' for exchange: 'orders'.
+2019-10-29 11:07:17.821 +05:30 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.DefaultAddressStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2019-10-29 11:13:43.994 +05:30 [INF] Registering a service [id: deliveries-service:d72a45247a274fdd81d8006b4665d789] in Consul...
+2019-10-29 11:13:44.073 +05:30 [INF] Start processing HTTP request PUT "http://localhost:8500/v1/agent/service/register"
+2019-10-29 11:13:44.081 +05:30 [INF] Sending HTTP request PUT "http://localhost:8500/v1/agent/service/register"
+2019-10-29 11:13:44.159 +05:30 [INF] Received HTTP response after 73.9049ms - "OK"
+2019-10-29 11:13:44.162 +05:30 [INF] End processing HTTP request after 96.33550000000001ms - "OK"
+2019-10-29 11:13:44.165 +05:30 [INF] Registered a service [id: deliveries-service:d72a45247a274fdd81d8006b4665d789] in Consul.
+2019-10-29 11:13:44.362 +05:30 [INF] Declaring an exchange: 'deliveries', type: 'topic'.
+2019-10-29 11:13:44.376 +05:30 [INF] Declaring a queue: 'e_shop.services.deliveries/order_created' with routing key: 'order_created' for exchange: 'orders'.
+2019-10-29 11:13:44.448 +05:30 [INF] Now listening on: http://localhost:5001
+2019-10-29 11:13:44.451 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2019-10-29 11:13:44.452 +05:30 [INF] Hosting environment: Production
+2019-10-29 11:13:44.454 +05:30 [INF] Content root path: E:\2019\netcore-eShop\EShop\EShop.Services.Delivery
+2019-10-29 11:17:37.288 +05:30 [INF] Received a message with id: 'df9c8b9fa50e472da614aea210189cfb', correlation id: '10ce0a3421904c57a1b8c3cbb79e6c05', timestamp: 1572328057 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:17:37.711 +05:30 [INF] Handling a message: 'OrderCreated' [id: 'df9c8b9fa50e472da614aea210189cfb'] with correlation id: '10ce0a3421904c57a1b8c3cbb79e6c05'. 
+2019-10-29 11:17:37.714 +05:30 [INF] Received 'order created' event with order id: 18790622-9781-4605-9439-3ed55c08c54d
+2019-10-29 11:17:37.716 +05:30 [INF] Starting a delivery with id: a4213736-17a2-47a2-8b4e-266a61ae5f6e
+2019-10-29 11:17:37.736 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: 'b3e71f9ed88b4d6daa2f15a0dc902818', correlation id: '10ce0a3421904c57a1b8c3cbb79e6c05']
+2019-10-29 11:17:37.742 +05:30 [INF] Handled a message: 'OrderCreated' [id: 'df9c8b9fa50e472da614aea210189cfb'] with correlation id: '10ce0a3421904c57a1b8c3cbb79e6c05'. 
+2019-10-29 11:23:52.633 +05:30 [INF] Received a message with id: 'd20b31fe23ea46a69929f860d4dfbf94', correlation id: '1a936eb92c6743008b9d697090da9c2f', timestamp: 1572328432 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:23:52.639 +05:30 [INF] Handling a message: 'OrderCreated' [id: 'd20b31fe23ea46a69929f860d4dfbf94'] with correlation id: '1a936eb92c6743008b9d697090da9c2f'. 
+2019-10-29 11:23:52.643 +05:30 [INF] Received 'order created' event with order id: cebad760-3edc-4d95-9917-798c9fc76fda
+2019-10-29 11:23:52.651 +05:30 [INF] Starting a delivery with id: 2a412034-4e6f-485a-aebc-174af1606e61
+2019-10-29 11:23:52.653 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: 'cfc984a431664393b390d47be1e52f66', correlation id: '1a936eb92c6743008b9d697090da9c2f']
+2019-10-29 11:23:52.657 +05:30 [INF] Handled a message: 'OrderCreated' [id: 'd20b31fe23ea46a69929f860d4dfbf94'] with correlation id: '1a936eb92c6743008b9d697090da9c2f'. 
+2019-10-29 11:23:55.172 +05:30 [INF] Received a message with id: '7541995ad2694a098314aa9d34d559ee', correlation id: 'babceabf2faf48708856fc00a2693036', timestamp: 1572328435 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:23:55.183 +05:30 [INF] Handling a message: 'OrderCreated' [id: '7541995ad2694a098314aa9d34d559ee'] with correlation id: 'babceabf2faf48708856fc00a2693036'. 
+2019-10-29 11:23:55.187 +05:30 [INF] Received 'order created' event with order id: a0c4a79e-71e9-46b4-8618-05dfb01174f1
+2019-10-29 11:23:55.190 +05:30 [INF] Starting a delivery with id: 7f061220-e27b-420a-9927-307b9637ec75
+2019-10-29 11:23:55.193 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: '4cd2dfabe70f42d9b97eb75be6ea7b2d', correlation id: 'babceabf2faf48708856fc00a2693036']
+2019-10-29 11:23:55.196 +05:30 [INF] Handled a message: 'OrderCreated' [id: '7541995ad2694a098314aa9d34d559ee'] with correlation id: 'babceabf2faf48708856fc00a2693036'. 
+2019-10-29 11:23:55.909 +05:30 [INF] Received a message with id: 'bd3345f2b5e34e6ab16bf8b50431be7e', correlation id: '9f8d73bf0dd04bc5aabf7368e732ce62', timestamp: 1572328435 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:23:55.918 +05:30 [INF] Handling a message: 'OrderCreated' [id: 'bd3345f2b5e34e6ab16bf8b50431be7e'] with correlation id: '9f8d73bf0dd04bc5aabf7368e732ce62'. 
+2019-10-29 11:23:55.920 +05:30 [INF] Received 'order created' event with order id: ffdbdd35-c7a5-4b31-a4b8-dad5ea1ed428
+2019-10-29 11:23:55.923 +05:30 [INF] Starting a delivery with id: b8725779-2d45-4ee6-88f6-02946abdd5d9
+2019-10-29 11:23:55.931 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: '1a6b85c40d9f48c9940b91b68decaf87', correlation id: '9f8d73bf0dd04bc5aabf7368e732ce62']
+2019-10-29 11:23:55.935 +05:30 [INF] Handled a message: 'OrderCreated' [id: 'bd3345f2b5e34e6ab16bf8b50431be7e'] with correlation id: '9f8d73bf0dd04bc5aabf7368e732ce62'. 
+2019-10-29 11:23:56.478 +05:30 [INF] Received a message with id: 'c759f4bc15e64cc2b8c197f0045d71d0', correlation id: '72890b76c8454e0c87939719aaa5a4db', timestamp: 1572328436 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:23:56.488 +05:30 [INF] Handling a message: 'OrderCreated' [id: 'c759f4bc15e64cc2b8c197f0045d71d0'] with correlation id: '72890b76c8454e0c87939719aaa5a4db'. 
+2019-10-29 11:23:56.490 +05:30 [INF] Received 'order created' event with order id: 65f24602-31ab-48c9-9869-e692e38fac8f
+2019-10-29 11:23:56.495 +05:30 [INF] Starting a delivery with id: ca492890-951b-46ca-aa6f-edff9540f7c7
+2019-10-29 11:23:56.498 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: 'ce10409654764f3d8718d0e8228a8091', correlation id: '72890b76c8454e0c87939719aaa5a4db']
+2019-10-29 11:23:56.500 +05:30 [INF] Handled a message: 'OrderCreated' [id: 'c759f4bc15e64cc2b8c197f0045d71d0'] with correlation id: '72890b76c8454e0c87939719aaa5a4db'. 
+2019-10-29 11:23:56.754 +05:30 [INF] Received a message with id: 'f242ebc8fd0d47d4a004473dc061f465', correlation id: 'aff59845eaaa4057a7b9e17c1841dd00', timestamp: 1572328436 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:23:56.763 +05:30 [INF] Handling a message: 'OrderCreated' [id: 'f242ebc8fd0d47d4a004473dc061f465'] with correlation id: 'aff59845eaaa4057a7b9e17c1841dd00'. 
+2019-10-29 11:23:56.767 +05:30 [INF] Received 'order created' event with order id: c0efb662-e743-40ca-8a56-273f131099d4
+2019-10-29 11:23:56.774 +05:30 [INF] Starting a delivery with id: 4d2e69c1-26c2-49a2-9381-2bf221498966
+2019-10-29 11:23:56.778 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: 'c6333361ac8c47bab154b28498c6c953', correlation id: 'aff59845eaaa4057a7b9e17c1841dd00']
+2019-10-29 11:23:56.783 +05:30 [INF] Handled a message: 'OrderCreated' [id: 'f242ebc8fd0d47d4a004473dc061f465'] with correlation id: 'aff59845eaaa4057a7b9e17c1841dd00'. 
+2019-10-29 11:23:56.968 +05:30 [INF] Received a message with id: '6da82661080446fdb781dcfe6015cd1b', correlation id: 'c972ced0128f4fbcaf0aa874aac26894', timestamp: 1572328436 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:23:56.977 +05:30 [INF] Handling a message: 'OrderCreated' [id: '6da82661080446fdb781dcfe6015cd1b'] with correlation id: 'c972ced0128f4fbcaf0aa874aac26894'. 
+2019-10-29 11:23:56.980 +05:30 [INF] Received 'order created' event with order id: 192a6e99-8272-4714-9dbe-7c23bb5dc26a
+2019-10-29 11:23:56.982 +05:30 [INF] Starting a delivery with id: c782a70a-a714-43c9-9a57-eaf2d534f696
+2019-10-29 11:23:56.986 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: 'c16f79cf2b1a4f2e8c7b88a3e2f36aae', correlation id: 'c972ced0128f4fbcaf0aa874aac26894']
+2019-10-29 11:23:57.000 +05:30 [INF] Handled a message: 'OrderCreated' [id: '6da82661080446fdb781dcfe6015cd1b'] with correlation id: 'c972ced0128f4fbcaf0aa874aac26894'. 
+2019-10-29 11:23:57.195 +05:30 [INF] Received a message with id: 'c7f94e557f9642799bf61456c387616b', correlation id: '7b51309660ea46b29ca8235ba1a771ec', timestamp: 1572328437 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:23:57.203 +05:30 [INF] Handling a message: 'OrderCreated' [id: 'c7f94e557f9642799bf61456c387616b'] with correlation id: '7b51309660ea46b29ca8235ba1a771ec'. 
+2019-10-29 11:23:57.205 +05:30 [INF] Received 'order created' event with order id: d793ac01-5de5-4c13-ad43-1125f20148ee
+2019-10-29 11:23:57.207 +05:30 [INF] Starting a delivery with id: cf8726cd-b5dc-4a83-96cb-460394d0d627
+2019-10-29 11:23:57.211 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: 'b51387871ac240bf9ff5ae3afc3b1d90', correlation id: '7b51309660ea46b29ca8235ba1a771ec']
+2019-10-29 11:23:57.216 +05:30 [INF] Handled a message: 'OrderCreated' [id: 'c7f94e557f9642799bf61456c387616b'] with correlation id: '7b51309660ea46b29ca8235ba1a771ec'. 
+2019-10-29 11:23:57.571 +05:30 [INF] Received a message with id: '5555b539d77c49deaca8129f86addcf7', correlation id: '3b14f9edfe244044a0e57c8415bba9f0', timestamp: 1572328437 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:23:57.581 +05:30 [INF] Handling a message: 'OrderCreated' [id: '5555b539d77c49deaca8129f86addcf7'] with correlation id: '3b14f9edfe244044a0e57c8415bba9f0'. 
+2019-10-29 11:23:57.588 +05:30 [INF] Received 'order created' event with order id: fa8cd184-e2d7-4dec-874f-a6902eeccd3d
+2019-10-29 11:23:57.593 +05:30 [INF] Starting a delivery with id: 0690cb37-c196-4d41-a19a-afe08116ba18
+2019-10-29 11:23:57.596 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: '0af9159264514c78bbf7add3ef869ce9', correlation id: '3b14f9edfe244044a0e57c8415bba9f0']
+2019-10-29 11:23:57.600 +05:30 [INF] Handled a message: 'OrderCreated' [id: '5555b539d77c49deaca8129f86addcf7'] with correlation id: '3b14f9edfe244044a0e57c8415bba9f0'. 
+2019-10-29 11:23:57.761 +05:30 [INF] Received a message with id: '664a815b574f4197a5277d3f5d124922', correlation id: '26d861ed008d4fea99bda270009b1235', timestamp: 1572328437 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:23:57.808 +05:30 [INF] Handling a message: 'OrderCreated' [id: '664a815b574f4197a5277d3f5d124922'] with correlation id: '26d861ed008d4fea99bda270009b1235'. 
+2019-10-29 11:23:57.811 +05:30 [INF] Received 'order created' event with order id: 2d234a13-b26b-400a-a0a5-5aa05eeef1de
+2019-10-29 11:23:57.815 +05:30 [INF] Starting a delivery with id: 80fbff38-1fd4-4976-ab0e-303d57ec4585
+2019-10-29 11:23:57.820 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: '44a68a6048024a70ab9209e86ddc3dc7', correlation id: '26d861ed008d4fea99bda270009b1235']
+2019-10-29 11:23:57.822 +05:30 [INF] Handled a message: 'OrderCreated' [id: '664a815b574f4197a5277d3f5d124922'] with correlation id: '26d861ed008d4fea99bda270009b1235'. 
+2019-10-29 11:23:57.989 +05:30 [INF] Received a message with id: '55beb7f1da1740f9b19a5568549ab024', correlation id: '3837196443394b0794fb696cf94a5a5a', timestamp: 1572328437 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:23:57.999 +05:30 [INF] Handling a message: 'OrderCreated' [id: '55beb7f1da1740f9b19a5568549ab024'] with correlation id: '3837196443394b0794fb696cf94a5a5a'. 
+2019-10-29 11:23:58.002 +05:30 [INF] Received 'order created' event with order id: 74da59bb-4de5-4d1e-8675-b0c2fbf2642d
+2019-10-29 11:23:58.009 +05:30 [INF] Starting a delivery with id: 8e345121-97ca-4115-974f-e54f12b9cd00
+2019-10-29 11:23:58.012 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: '01b64dc6466c42ebbc51e98b95a62509', correlation id: '3837196443394b0794fb696cf94a5a5a']
+2019-10-29 11:23:58.015 +05:30 [INF] Handled a message: 'OrderCreated' [id: '55beb7f1da1740f9b19a5568549ab024'] with correlation id: '3837196443394b0794fb696cf94a5a5a'. 
+2019-10-29 11:23:58.169 +05:30 [INF] Received a message with id: '75db3f7470db462d8c74402df45b6180', correlation id: '74886f7ce1a44305be38615a6515d7b9', timestamp: 1572328438 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:23:58.177 +05:30 [INF] Handling a message: 'OrderCreated' [id: '75db3f7470db462d8c74402df45b6180'] with correlation id: '74886f7ce1a44305be38615a6515d7b9'. 
+2019-10-29 11:23:58.180 +05:30 [INF] Received 'order created' event with order id: 075f211d-82b1-4b2e-9b19-c545ca88a655
+2019-10-29 11:23:58.182 +05:30 [INF] Starting a delivery with id: 18d2f69a-c222-4c49-942e-e7c5b02bb1f6
+2019-10-29 11:23:58.184 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: 'ee1928efc5444ebb91e0dc50a38382af', correlation id: '74886f7ce1a44305be38615a6515d7b9']
+2019-10-29 11:23:58.188 +05:30 [INF] Handled a message: 'OrderCreated' [id: '75db3f7470db462d8c74402df45b6180'] with correlation id: '74886f7ce1a44305be38615a6515d7b9'. 
+2019-10-29 11:23:58.385 +05:30 [INF] Received a message with id: '72440014aca74b4da334704e566bc019', correlation id: 'eac6672d0cd94776bde03150a269a049', timestamp: 1572328438 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 11:23:58.392 +05:30 [INF] Handling a message: 'OrderCreated' [id: '72440014aca74b4da334704e566bc019'] with correlation id: 'eac6672d0cd94776bde03150a269a049'. 
+2019-10-29 11:23:58.404 +05:30 [INF] Received 'order created' event with order id: 7913483d-88fd-4fb5-a5ba-55bd514174ca
+2019-10-29 11:23:58.408 +05:30 [INF] Starting a delivery with id: 27e8dbb5-7340-4f4e-8e0a-64c714c552a8
+2019-10-29 11:23:58.412 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: '127174e6cadd4b50abbd6e1cab3fa359', correlation id: 'eac6672d0cd94776bde03150a269a049']
+2019-10-29 11:23:58.422 +05:30 [INF] Handled a message: 'OrderCreated' [id: '72440014aca74b4da334704e566bc019'] with correlation id: 'eac6672d0cd94776bde03150a269a049'. 
+2019-10-29 11:45:17.915 +05:30 [INF] Application is shutting down...
+2019-10-29 11:45:17.924 +05:30 [INF] Deregistering a service [id: deliveries-service:d72a45247a274fdd81d8006b4665d789] from Consul...
+2019-10-29 11:45:17.928 +05:30 [INF] Start processing HTTP request PUT "http://localhost:8500/v1/agent/service/deregister/deliveries-service:d72a45247a274fdd81d8006b4665d789"
+2019-10-29 11:45:17.931 +05:30 [INF] Sending HTTP request PUT "http://localhost:8500/v1/agent/service/deregister/deliveries-service:d72a45247a274fdd81d8006b4665d789"
+2019-10-29 11:45:17.943 +05:30 [INF] Received HTTP response after 12.0432ms - "OK"
+2019-10-29 11:45:17.945 +05:30 [INF] End processing HTTP request after 17.1168ms - "OK"
+2019-10-29 11:45:17.948 +05:30 [INF] Deregistered a service [id: deliveries-service:d72a45247a274fdd81d8006b4665d789] from Consul.
+2019-10-29 11:45:23.525 +05:30 [INF] Registering a service [id: deliveries-service:55bef6edb2634fbaaa30f7080a222aab] in Consul...
+2019-10-29 11:45:23.611 +05:30 [INF] Start processing HTTP request PUT "http://localhost:8500/v1/agent/service/register"
+2019-10-29 11:45:23.618 +05:30 [INF] Sending HTTP request PUT "http://localhost:8500/v1/agent/service/register"
+2019-10-29 11:45:23.694 +05:30 [INF] Received HTTP response after 72.4843ms - "OK"
+2019-10-29 11:45:23.700 +05:30 [INF] End processing HTTP request after 96.93180000000001ms - "OK"
+2019-10-29 11:45:23.703 +05:30 [INF] Registered a service [id: deliveries-service:55bef6edb2634fbaaa30f7080a222aab] in Consul.
+2019-10-29 11:45:23.842 +05:30 [INF] Declaring an exchange: 'deliveries', type: 'topic'.
+2019-10-29 11:45:23.856 +05:30 [INF] Declaring a queue: 'e_shop.services.deliveries/order_created' with routing key: 'order_created' for exchange: 'orders'.
+2019-10-29 11:45:23.927 +05:30 [INF] Now listening on: http://localhost:5001
+2019-10-29 11:45:23.930 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2019-10-29 11:45:23.931 +05:30 [INF] Hosting environment: Production
+2019-10-29 11:45:23.932 +05:30 [INF] Content root path: E:\2019\netcore-eShop\EShop\EShop.Services.Delivery
+2019-10-29 11:45:27.786 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:45:32.906 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:45:38.006 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:45:39.041 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:45:44.111 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:45:49.180 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:45:54.256 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:45:59.322 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:46:04.398 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:46:13.484 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:46:18.578 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:46:23.623 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:46:24.684 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:46:29.760 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:46:34.835 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:46:39.909 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:46:44.967 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:46:50.057 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:46:59.166 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:47:04.221 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:47:09.327 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:47:10.368 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:47:15.411 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:47:20.475 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:47:25.524 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:47:30.600 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:47:35.680 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:47:44.759 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:47:49.843 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:47:54.900 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:47:55.960 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:48:01.024 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:48:06.115 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:48:11.190 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:48:16.257 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:48:21.304 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:48:30.358 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:48:35.421 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:48:40.470 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:48:41.506 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:48:46.601 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:48:51.677 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:48:56.742 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:49:01.803 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:49:06.836 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:49:15.878 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:49:20.951 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:49:26.029 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:49:27.098 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:49:32.163 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:49:37.229 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:49:42.302 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:49:47.365 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:49:52.459 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:01.558 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:06.635 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:11.687 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:12.740 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:17.820 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:22.880 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:27.944 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:33.007 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:38.082 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:47.114 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:52.186 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:57.250 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:50:58.307 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:51:03.366 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:51:08.429 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:51:13.474 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:51:18.523 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:51:23.582 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:51:32.671 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:51:37.731 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:51:42.777 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:51:43.834 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:51:48.914 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:51:53.990 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:51:59.022 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:52:04.104 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:52:09.147 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:52:18.222 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:52:23.295 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:52:28.362 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:52:29.412 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:52:34.490 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:52:39.553 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:52:44.618 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:52:49.694 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:52:54.802 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:53:03.856 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:53:08.889 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:53:13.982 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:53:15.008 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:53:20.069 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:53:25.165 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:53:30.239 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:53:35.291 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:53:40.317 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:53:49.374 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:53:54.436 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:53:59.464 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:54:00.497 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:54:05.554 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:54:10.619 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:54:15.648 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:54:20.698 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:54:25.756 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:54:34.813 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:54:39.858 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:54:44.943 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:54:46.001 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:54:51.021 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:54:56.083 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:55:01.116 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:55:06.164 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:55:11.254 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:55:20.308 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:55:25.339 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:55:30.399 +05:30 [WRN] Reporter App.Metrics.Reporting.InfluxDB.InfluxDbMetricsReporter FlushAsync failed
+2019-10-29 11:55:30.719 +05:30 [INF] Application is shutting down...
+2019-10-29 11:55:30.729 +05:30 [INF] Deregistering a service [id: deliveries-service:55bef6edb2634fbaaa30f7080a222aab] from Consul...
+2019-10-29 11:55:30.732 +05:30 [INF] Start processing HTTP request PUT "http://localhost:8500/v1/agent/service/deregister/deliveries-service:55bef6edb2634fbaaa30f7080a222aab"
+2019-10-29 11:55:30.734 +05:30 [INF] Sending HTTP request PUT "http://localhost:8500/v1/agent/service/deregister/deliveries-service:55bef6edb2634fbaaa30f7080a222aab"
+2019-10-29 11:55:30.743 +05:30 [INF] Received HTTP response after 9.2705ms - "OK"
+2019-10-29 11:55:30.746 +05:30 [INF] End processing HTTP request after 14.2697ms - "OK"
+2019-10-29 11:55:30.750 +05:30 [INF] Deregistered a service [id: deliveries-service:55bef6edb2634fbaaa30f7080a222aab] from Consul.
+2019-10-29 11:55:42.007 +05:30 [INF] Registering a service [id: deliveries-service:40d3a7359f234c39bf7c38d38eeda3ad] in Consul...
+2019-10-29 11:55:42.088 +05:30 [INF] Start processing HTTP request PUT "http://localhost:8500/v1/agent/service/register"
+2019-10-29 11:55:42.095 +05:30 [INF] Sending HTTP request PUT "http://localhost:8500/v1/agent/service/register"
+2019-10-29 11:55:42.205 +05:30 [INF] Received HTTP response after 105.1787ms - "OK"
+2019-10-29 11:55:42.208 +05:30 [INF] End processing HTTP request after 128.21450000000002ms - "OK"
+2019-10-29 11:55:42.212 +05:30 [INF] Registered a service [id: deliveries-service:40d3a7359f234c39bf7c38d38eeda3ad] in Consul.
+2019-10-29 11:55:42.401 +05:30 [INF] Declaring an exchange: 'deliveries', type: 'topic'.
+2019-10-29 11:55:42.415 +05:30 [INF] Declaring a queue: 'e_shop.services.deliveries/order_created' with routing key: 'order_created' for exchange: 'orders'.
+2019-10-29 11:55:42.487 +05:30 [INF] Now listening on: http://localhost:5001
+2019-10-29 11:55:42.489 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2019-10-29 11:55:42.490 +05:30 [INF] Hosting environment: Production
+2019-10-29 11:55:42.492 +05:30 [INF] Content root path: E:\2019\netcore-eShop\EShop\EShop.Services.Delivery
+2019-10-29 12:07:12.923 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5001/  
+2019-10-29 12:07:12.977 +05:30 [INF] Executing endpoint ' HTTP: GET'
+2019-10-29 12:07:12.980 +05:30 [INF] Executed endpoint ' HTTP: GET'
+2019-10-29 12:07:12.987 +05:30 [INF] Request finished in 64.0145ms 200 
+2019-10-29 12:07:13.772 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5001/  
+2019-10-29 12:07:13.776 +05:30 [INF] Executing endpoint ' HTTP: GET'
+2019-10-29 12:07:13.778 +05:30 [INF] Executed endpoint ' HTTP: GET'
+2019-10-29 12:07:13.784 +05:30 [INF] Request finished in 11.643600000000001ms 200 
+2019-10-29 12:07:14.424 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5001/  
+2019-10-29 12:07:14.427 +05:30 [INF] Executing endpoint ' HTTP: GET'
+2019-10-29 12:07:14.429 +05:30 [INF] Executed endpoint ' HTTP: GET'
+2019-10-29 12:07:14.432 +05:30 [INF] Request finished in 7.934ms 200 
+2019-10-29 12:20:59.166 +05:30 [INF] Received a message with id: 'edc12469b65a47ed909d79375ad73710', correlation id: 'ef23fd4f777149b6aa33a154863b5fe3', timestamp: 1572331859 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 12:20:59.594 +05:30 [INF] Handling a message: 'OrderCreated' [id: 'edc12469b65a47ed909d79375ad73710'] with correlation id: 'ef23fd4f777149b6aa33a154863b5fe3'. 
+2019-10-29 12:20:59.598 +05:30 [INF] Received 'order created' event with order id: eadd2274-fc5f-4240-992e-bea521dd1815
+2019-10-29 12:20:59.599 +05:30 [INF] Starting a delivery with id: bda5f66a-988c-4e03-9edc-9d980ce01310
+2019-10-29 12:20:59.620 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: 'd04fef63a0cc4c13b0d0cada5b162be7', correlation id: 'ef23fd4f777149b6aa33a154863b5fe3']
+2019-10-29 12:20:59.626 +05:30 [INF] Handled a message: 'OrderCreated' [id: 'edc12469b65a47ed909d79375ad73710'] with correlation id: 'ef23fd4f777149b6aa33a154863b5fe3'. 
+2019-10-29 12:20:59.636 +05:30 [INF] Received a message with id: 'fe07fe5886bc48db8b2e3f99cb8b4865', correlation id: 'f293f80242804e8fa6d521cf2e75c8eb', timestamp: 1572331859 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 12:20:59.647 +05:30 [INF] Handling a message: 'OrderCreated' [id: 'fe07fe5886bc48db8b2e3f99cb8b4865'] with correlation id: 'f293f80242804e8fa6d521cf2e75c8eb'. 
+2019-10-29 12:20:59.648 +05:30 [INF] Received 'order created' event with order id: a7d3f951-2ef0-43e8-a8b9-70c53d2b9ec3
+2019-10-29 12:20:59.655 +05:30 [INF] Starting a delivery with id: b96484fd-4085-401d-a40e-31523aeef4f2
+2019-10-29 12:20:59.656 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: 'dcde86f2e2d74ebc96845319015b42b8', correlation id: 'f293f80242804e8fa6d521cf2e75c8eb']
+2019-10-29 12:20:59.659 +05:30 [INF] Handled a message: 'OrderCreated' [id: 'fe07fe5886bc48db8b2e3f99cb8b4865'] with correlation id: 'f293f80242804e8fa6d521cf2e75c8eb'. 
+2019-10-29 12:20:59.662 +05:30 [INF] Received a message with id: '0b1f26529a30476b9e8547cec4a497bd', correlation id: 'a6a6a920a67a43a9933b8fdfc37a293b', timestamp: 1572331859 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 12:20:59.666 +05:30 [INF] Handling a message: 'OrderCreated' [id: '0b1f26529a30476b9e8547cec4a497bd'] with correlation id: 'a6a6a920a67a43a9933b8fdfc37a293b'. 
+2019-10-29 12:20:59.668 +05:30 [INF] Received 'order created' event with order id: eacfa6ba-ca04-4e6c-aa2f-37a4242c9f4f
+2019-10-29 12:20:59.669 +05:30 [INF] Starting a delivery with id: d730b6b1-dca7-4ce8-88e6-27be13f1fd29
+2019-10-29 12:20:59.671 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: 'f173d4766796429c896eb42612bb919f', correlation id: 'a6a6a920a67a43a9933b8fdfc37a293b']
+2019-10-29 12:20:59.673 +05:30 [INF] Handled a message: 'OrderCreated' [id: '0b1f26529a30476b9e8547cec4a497bd'] with correlation id: 'a6a6a920a67a43a9933b8fdfc37a293b'. 
+2019-10-29 12:20:59.690 +05:30 [INF] Received a message with id: 'dce8f23c067646bcbce89022a07cb519', correlation id: 'cf6a167bdc324995ab01e0614b5858a0', timestamp: 1572331859 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 12:20:59.697 +05:30 [INF] Handling a message: 'OrderCreated' [id: 'dce8f23c067646bcbce89022a07cb519'] with correlation id: 'cf6a167bdc324995ab01e0614b5858a0'. 
+2019-10-29 12:20:59.701 +05:30 [INF] Received 'order created' event with order id: 1a456974-4505-40b9-83e9-d9e4f6841af6
+2019-10-29 12:20:59.702 +05:30 [INF] Starting a delivery with id: 3702c08b-e768-423a-8e60-fef39bc2aada
+2019-10-29 12:20:59.704 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: '5cacfe3e53604fb18bc7818c13f38ca0', correlation id: 'cf6a167bdc324995ab01e0614b5858a0']
+2019-10-29 12:20:59.706 +05:30 [INF] Handled a message: 'OrderCreated' [id: 'dce8f23c067646bcbce89022a07cb519'] with correlation id: 'cf6a167bdc324995ab01e0614b5858a0'. 
+2019-10-29 12:20:59.735 +05:30 [INF] Received a message with id: '9f87ea3e6c7c4be8a21af3e4790946b0', correlation id: '374a459e3ba64785842ea54497896689', timestamp: 1572331859 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 12:20:59.742 +05:30 [INF] Handling a message: 'OrderCreated' [id: '9f87ea3e6c7c4be8a21af3e4790946b0'] with correlation id: '374a459e3ba64785842ea54497896689'. 
+2019-10-29 12:20:59.745 +05:30 [INF] Received 'order created' event with order id: e2207bbb-933f-49f7-9f53-62f0b9d52023
+2019-10-29 12:20:59.747 +05:30 [INF] Starting a delivery with id: db05c5ac-2295-4985-94a2-e53a0f6597f1
+2019-10-29 12:20:59.751 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: 'f01f2712cb42496699548228026cea69', correlation id: '374a459e3ba64785842ea54497896689']
+2019-10-29 12:20:59.762 +05:30 [INF] Handled a message: 'OrderCreated' [id: '9f87ea3e6c7c4be8a21af3e4790946b0'] with correlation id: '374a459e3ba64785842ea54497896689'. 
+2019-10-29 12:21:00.012 +05:30 [INF] Received a message with id: 'c9792f584d814682a7df0fb9820a37eb', correlation id: 'b2ff66f9eaed428bb6943534c4285d55', timestamp: 1572331860 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 12:21:00.018 +05:30 [INF] Handling a message: 'OrderCreated' [id: 'c9792f584d814682a7df0fb9820a37eb'] with correlation id: 'b2ff66f9eaed428bb6943534c4285d55'. 
+2019-10-29 12:21:00.020 +05:30 [INF] Received 'order created' event with order id: 4fdc6701-6200-400a-bc22-483f8fc5bf47
+2019-10-29 12:21:00.022 +05:30 [INF] Starting a delivery with id: 22a97b45-ebcf-4fad-8b1f-626ed061865a
+2019-10-29 12:21:00.023 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: '76fe9ed48b8142a3a36f272458c73d61', correlation id: 'b2ff66f9eaed428bb6943534c4285d55']
+2019-10-29 12:21:00.026 +05:30 [INF] Handled a message: 'OrderCreated' [id: 'c9792f584d814682a7df0fb9820a37eb'] with correlation id: 'b2ff66f9eaed428bb6943534c4285d55'. 
+2019-10-29 12:21:00.201 +05:30 [INF] Received a message with id: '6e7abd67b1cb45c4abf11ee3405eda88', correlation id: '9ec10b75f99f4f0c848280073c2962f3', timestamp: 1572331860 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 12:21:00.214 +05:30 [INF] Handling a message: 'OrderCreated' [id: '6e7abd67b1cb45c4abf11ee3405eda88'] with correlation id: '9ec10b75f99f4f0c848280073c2962f3'. 
+2019-10-29 12:21:00.233 +05:30 [INF] Received 'order created' event with order id: 9ed22b08-ab95-4bb5-b719-18a9465c64f7
+2019-10-29 12:21:00.235 +05:30 [INF] Starting a delivery with id: 7c8f9866-eda7-4643-a9bb-b3e52b63eab5
+2019-10-29 12:21:00.237 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: 'a144f457ea4143b3a6981928ea255605', correlation id: '9ec10b75f99f4f0c848280073c2962f3']
+2019-10-29 12:21:00.246 +05:30 [INF] Handled a message: 'OrderCreated' [id: '6e7abd67b1cb45c4abf11ee3405eda88'] with correlation id: '9ec10b75f99f4f0c848280073c2962f3'. 
+2019-10-29 12:21:00.397 +05:30 [INF] Received a message with id: 'dcdf6c509be64f37a62131af72518703', correlation id: 'c41538fc44e24da3bfdd15a6135c1704', timestamp: 1572331860 [queue: 'e_shop.services.deliveries/order_created', routing key: 'order_created', exchange: 'orders'].
+2019-10-29 12:21:00.415 +05:30 [INF] Handling a message: 'OrderCreated' [id: 'dcdf6c509be64f37a62131af72518703'] with correlation id: 'c41538fc44e24da3bfdd15a6135c1704'. 
+2019-10-29 12:21:00.416 +05:30 [INF] Received 'order created' event with order id: 34c881fe-53a9-413c-9023-7cbe48779618
+2019-10-29 12:21:00.419 +05:30 [INF] Starting a delivery with id: 46e07980-0d01-4357-91f2-1abf39ab55be
+2019-10-29 12:21:00.431 +05:30 [INF] Publishing a message with routing key: 'delivery_started' to exchange: 'deliveries' [id: '723fca7abef24d35a35dad69cceb7ea7', correlation id: 'c41538fc44e24da3bfdd15a6135c1704']
+2019-10-29 12:21:00.434 +05:30 [INF] Handled a message: 'OrderCreated' [id: 'dcdf6c509be64f37a62131af72518703'] with correlation id: 'c41538fc44e24da3bfdd15a6135c1704'. 

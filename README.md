@@ -11,7 +11,7 @@ Features demonstrated
  - Distributed Tracing Using Jaeger and Open Tracing 
  - Metrics via Seq, Prometheus, grafana, influxdb
 
-
+Sample app screenshots below link. 
 [Screenshots](https://imgur.com/a/tL6Yuqt)
 
 learnt many new stuffs by using Convey Libariries. 
